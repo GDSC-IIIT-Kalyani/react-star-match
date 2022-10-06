@@ -3,6 +3,14 @@
   margin: 0 auto;
 }
 
+.rules {
+  max-width: 500px;
+  text-align: center;
+  border: thin solid #ddd;
+  margin: 10px auto;
+  padding: 10px;
+}
+
 .body {
   display: flex;
 }
