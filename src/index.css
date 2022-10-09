@@ -1,14 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alfa+Slab+One&family=JetBrains+Mono:wght@500&family=Nabla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alfa+Slab+One&family=JetBrains+Mono:wght@500&family=Nabla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alfa+Slab+One&family=JetBrains+Mono:wght@500&family=Nabla&family=Poiret+One&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Courier New", Courier, monospace;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: url(./assets/starry-bg.mp4);
+}
+
 .game {
   max-width: 500px;
   margin: 0 auto;
 }
 
 .rules {
-  max-width: 500px;
+  display: flex;
+  background-image: url('./assets/rulecard.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 53.8em;
+  min-height: 37em;
   text-align: center;
-  border: thin solid #ddd;
+  /* border: thin solid #ddd; */
   margin: 10px auto;
   padding: 10px;
+}
+
+.rules video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.rules .contents {
+  margin-top: 0.75em;
+  padding: 5em;
+}
+
+.rules h1 {
+  font-family: 'Nabla';
+  font-size: 4em;
+}
+
+.rules h3 {
+  font-family: 'Abril Fatface', cursive;
+  font-size: 1.5em;
+  padding: 1em;
+  color: #ffb934;
+}
+
+.rules p {
+  padding-bottom: 2em;
+  font-family: 'Poiret One', cursive;
+  font-size: 1.3em;
+  font-weight: 500;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+		-webkit-tap-highlight-color: transparent;
+}
+
+button {
+	width: 6em;
+	height: 2.5em;
+	cursor: pointer;
+  font-family: 'Poiret One', cursive;
+	font-size: 1.2em;
+	font-weight: bold;
+	color: black;
+	background: white;
+	border: 2px solid #ffc803;
+	box-shadow: 5px 5px 0 #ffc803,
+		-5px -5px 0 #ffc803,
+		-5px 5px 0 #ffc803,
+		5px -5px 0 #ffc803;
+	transition: 500ms ease-in-out;
+}
+
+button:hover {
+	box-shadow: 20px 5px 0 #ffb934, -20px -5px 0 #ffb934;
+}
+
+button:focus {
+	outline: none;
 }
 
 .body {
